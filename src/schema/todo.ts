@@ -5,7 +5,7 @@ export const createTaskSchema = z.object({
   body: z.string().min(5),
 })
 
-export type createTaskSchema = z.TypeOf<typeof createTaskSchema>
+export type createTaskInput = z.TypeOf<typeof createTaskSchema>
 
 export const updateTaskSchema = z.object({
   taskId: z.string().cuid(),
@@ -13,7 +13,7 @@ export const updateTaskSchema = z.object({
   body: z.string().min(5),
 })
 
-export type updateTaskSchema = z.TypeOf<typeof updateTaskSchema>
+export type updateTaskInput = z.TypeOf<typeof updateTaskSchema>
 
 export const getSingleTaskSchema = z.object({
   taskId: z.string().cuid(),
